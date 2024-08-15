@@ -7,9 +7,10 @@ public class Calculator {
     BinaryOperator<Integer> minus = (x, y) -> x - y;
     BinaryOperator<Integer> multiply = (x, y) -> x * y;
 
-    BinaryOperator<Integer> devide = (x, y) -> {
+    BinaryOperator<Integer> divide = (x, y) -> {
         if(this.isZero.test(y)){
-            throw new RuntimeException("Нельзя делить на 0");
+            //throw new RuntimeException("Нельзя делить на 0");
+            throw new ArithmeticException("Нельзя дельть на 0");
         }
         return x / y;
         };
